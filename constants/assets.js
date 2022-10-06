@@ -7,6 +7,7 @@ import naissance3 from "../assets/images/naissance3.jpg";
 import sitter1 from "../assets/images/sitter1.jpg";
 import sitter2 from "../assets/images/sitter2.jpg";
 import sitter3 from "../assets/images/sitter3.jpg";
+import left from "../assets/icons/left.png";
 
 
 
@@ -20,4 +21,5 @@ export default {
   sitter1,
   sitter2,
   sitter3,
+  left,
 };

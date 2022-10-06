@@ -5,27 +5,54 @@ const ShootingData = [
     id: 1,
     name: "Grossesse de Marie",
     images: [
-      assets.grossesse1,
-      assets.grossesse2,
-      assets.grossesse3,
+      {
+        id: 1,
+        path: assets.grossesse1,
+      },
+      {
+        id: 2,
+        path: assets.grossesse2,
+      },
+      {
+        id: 3,
+        path: assets.grossesse3,
+      },
     ]
   },
   {
     id: 2,
     name: "Naissance de Gabriel",
     images: [
-      assets.naissance1,
-      assets.naissance2,
-      assets.naissance3,
+      {
+        id: 4,
+        path: assets.naissance1,
+      },
+      {
+        id: 5,
+        path: assets.naissance2,
+      },
+      {
+        id: 6,
+        path: assets.naissance3,
+      },
     ]
   },
   {
     id: 3,
     name: "Nina tient assise",
     images: [
-      assets.sitter1,
-      assets.sitter2,
-      assets.sitter3,
+      {
+        id: 7,
+        path: assets.sitter1,
+      },
+      {
+        id: 8,
+        path: assets.sitter2,
+      },
+      {
+        id: 9,
+        path: assets.sitter3,
+      },
     ]
   },
   

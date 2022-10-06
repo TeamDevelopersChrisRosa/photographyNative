@@ -7,6 +7,9 @@ import { RectButton } from "./Button";
 import { TouchableHighlight } from "react-native-gesture-handler";
 
 const ShootingCard = ({ data }) => {
+
+  console.log('data dans shootingCard', data);
+
   const navigation = useNavigation();
 
   return (
@@ -20,7 +23,7 @@ const ShootingCard = ({ data }) => {
         >
           <TouchableHighlight onPress={() => navigation.navigate("Details", { data: data })}>
             <Image
-              source={data.images[1]}
+              source={data.images[1].path}
               resizeMode="cover"
               style={{
                 width: "100%",

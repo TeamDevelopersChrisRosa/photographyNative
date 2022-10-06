@@ -1,9 +1,10 @@
 import ShootingCard from "./ShootingCard";
-import { RectButton } from "./Button";
-import DetailsShooting from './DetailsShooting';
+import { RectButton, CircleButton } from "./Button";
+import ImageOfShooting from './ImageOfShooting';
 
 export {
   ShootingCard,
   RectButton,
-  DetailsShooting,
+  CircleButton,
+  ImageOfShooting,
 };
