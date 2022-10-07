@@ -1,18 +1,35 @@
-import React, { useState } from "react";
-import { View, SafeAreaView, FlatList, Button } from "react-native";
+import React, { useEffect, useState } from 'react';
+import { View, SafeAreaView, FlatList } from "react-native";
 
 import { ShootingCard } from "../components";
-import { COLORS, ShootingData } from "../constants";
 
 const Home = () => {
-  const [shootingData, setShootingData] = useState(ShootingData);
+
+  const [isLoading, setLoading] = useState(true);
+  const [shootings, setShootings] = useState([]);
+
+  const getShootings = async () => {
+    try {
+     const response = await fetch('https://photographyy.herokuapp.com/api/shooting');
+     const json = await response.json();
+     setShootings(json);
+   } catch (error) {
+     console.error(error);
+   } finally {
+     setLoading(false);
+   }
+ }
+
+ useEffect(() => {
+   getShootings();
+ }, []);
 
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <View style={{ flex: 1 }}>
         <View>
           <FlatList
-            data={shootingData}
+            data={shootings}
             renderItem={({ item }) => < ShootingCard data={item} />}
             keyExtractor={(item) => item.id}
             showsVerticalScrollIndicator={false}
