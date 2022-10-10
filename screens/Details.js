@@ -1,5 +1,5 @@
 import React from "react";
-import { View, SafeAreaView, Image, StatusBar, FlatList } from "react-native";
+import { View, SafeAreaView, FlatList } from "react-native";
 
 import { SIZES, assets } from "../constants";
 import { CircleButton, ImageOfShooting } from "../components";
@@ -24,7 +24,7 @@ const Details = ({ route, navigation }) => {
     <SafeAreaView style={{ flex: 1 }}>
 
       <FlatList
-        data={data.images} 
+        data={data.pictures} 
         renderItem={({ item }) => <ImageOfShooting image={item} />}
         keyExtractor={(item) => item.id}
         showsVerticalScrollIndicator={false}

@@ -4,7 +4,6 @@ import org.apache.tools.ant.taskdefs.condition.Os
 
 buildscript {
     ext {
-        kotlin_version = '1.5.10'
         buildToolsVersion = findProperty('android.buildToolsVersion') ?: '31.0.0'
         minSdkVersion = Integer.parseInt(findProperty('android.minSdkVersion') ?: '21')
         compileSdkVersion = Integer.parseInt(findProperty('android.compileSdkVersion') ?: '31')
@@ -28,7 +27,6 @@ buildscript {
     }
     dependencies {
         classpath('com.android.tools.build:gradle:7.1.1')
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version")
         classpath('com.facebook.react:react-native-gradle-plugin')
         classpath('de.undercouch:gradle-download-task:5.0.1')
         // NOTE: Do not place your application dependencies here; they belong
