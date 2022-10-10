@@ -1,4 +1,4 @@
-import assets from "./assets";
-import { COLORS, SHADOWS, SIZES} from "./theme";
+import { COLORS, SHADOWS, SIZES, FONTS } from "./theme";
+import { ShootingData } from "./shootingData";
 
-export { assets, COLORS, SHADOWS, SIZES };
+export { assets, COLORS, SHADOWS, SIZES, FONTS, ShootingData };

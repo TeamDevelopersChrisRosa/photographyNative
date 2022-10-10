@@ -12,9 +12,7 @@ const ImageOfShooting = ({image}) => {
       key={image.id}
     >
       <Image
-        source={{
-          uri: image.secureUrl,
-        }}
+        source={image.path}
         resizeMode="contain"
         style={{ 
           width: "95%",

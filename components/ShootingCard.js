@@ -1,13 +1,14 @@
-import React from 'react';
+import React from "react";
 import { useNavigation } from "@react-navigation/native";
-import { View, Image } from "react-native";
+import { View, Image, Button } from "react-native";
 
-import { SIZES } from "../constants";
+import { COLORS, SIZES, SHADOWS, assets } from "../constants";
 import { RectButton } from "./Button";
 import { TouchableHighlight } from "react-native-gesture-handler";
 
-
 const ShootingCard = ({ data }) => {
+
+  console.log('data dans shootingCard', data);
 
   const navigation = useNavigation();
 
@@ -22,9 +23,7 @@ const ShootingCard = ({ data }) => {
         >
           <TouchableHighlight onPress={() => navigation.navigate("Details", { data: data })}>
             <Image
-              source={{
-                uri: data.pictures[0].secureUrl,
-              }}
+              source={data.images[1].path}
               resizeMode="cover"
               style={{
                 width: "100%",
@@ -33,7 +32,6 @@ const ShootingCard = ({ data }) => {
                 borderTopRightRadius: SIZES.font,
               }}
             /> 
-         
           </TouchableHighlight>
       </View>
     
@@ -43,13 +41,13 @@ const ShootingCard = ({ data }) => {
           style={{
            position: "absolute",
             top: -70,
-            left: '33%',
+            left: 140,
           }}
         >
           <RectButton
             minWidth={120}
             fontSize={SIZES.font}
-            name={data.nameOfGallery}
+            name={data.name}
             handlePress={() => navigation.navigate("Details", { data })}
           />
         </View>
